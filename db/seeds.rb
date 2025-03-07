@@ -16,8 +16,9 @@
 # Visit https://pragprog.com/titles/rails8 for more book information.
 #---
 # encoding: utf-8
+
 Product.delete_all
-product = Product.create(title: 'Programming Ruby 3.3 (5th Edition)',
+product = Product.create(title: "Programming Ruby 3.3 (5th Edition)",
   description:
     %(<p>
       <em>The Pragmatic Programmers' Guide</em>
@@ -33,12 +34,13 @@ product = Product.create(title: 'Programming Ruby 3.3 (5th Edition)',
   price: 33.95)
 
 product.image.attach(io: File.open(
-  Rails.root.join('db', 'images', 'ruby5.jpg')),
-    filename: 'ruby5.jpg')
+  Rails.root.join("db", "images", "ruby5.jpg")
+),
+  filename: "ruby5.jpg")
 
 product.save!
 # . . .
-product = Product.create(title: 'Rails Scales!',
+product = Product.create(title: "Rails Scales!",
   description:
     %(<p>
       <em>Practical Techniques for Performance and Growth</em>
@@ -54,14 +56,15 @@ product = Product.create(title: 'Rails Scales!',
     </p>),
   price: 30.95)
 
-  product.image.attach(io: File.open(
-    Rails.root.join('db', 'images', 'cprpo.jpg')),
-      filename: 'cprpo.jpg')
+product.image.attach(io: File.open(
+  Rails.root.join("db", "images", "cprpo.jpg")
+),
+  filename: "cprpo.jpg")
 
-  product.save!
+product.save!
 # . . .
 
-product = Product.create(title: 'Modern Front-End Development for Rails, Second Edition',
+product = Product.create(title: "Modern Front-End Development for Rails, Second Edition",
   description:
     %(<p>
       <em>Hotwire, Stimulus, Turbo, and React</em>
@@ -77,7 +80,8 @@ product = Product.create(title: 'Modern Front-End Development for Rails, Second 
   price: 28.95)
 
 product.image.attach(io: File.open(
-  Rails.root.join('db', 'images', 'nrclient2.jpg')),
-    filename: 'nrclient2.jpg')
+  Rails.root.join("db", "images", "nrclient2.jpg")
+),
+  filename: "nrclient2.jpg")
 
 product.save!
